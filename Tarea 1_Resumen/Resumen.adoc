@@ -1,1 +1,276 @@
-djdhjdhjdjh
+== Resumen
+
+*Modelo de caja* + 
+ _Content:_  +
+ Es el valor por defecto que tiene el Box 
+Model, una característica que presenta 
+es que es aditivo, es decir, si 
+agregamos un tamaño al margin, padding y 
+border estos se sumaran al width y 
+height ya establecidos, y agrandamos el 
+tamaño de nuestra caja. + 
+ _Padding:_ +
+Es la distancia del borde de un elemnto 
+hacia el contenido
+Al agregar un padding este no sumará 
+pixeles a la caja, si no por el 
+contrario, el tamaño de la caja se 
+reducirá para agregar este y la caja 
+mantenga el tamaño establecido 
+inicialmente, dejando fuera a border y 
+margin. + 
+_Border:_ +
+Al igual que el anterior disminuirá su 
+tamaño agregando al padding y border para 
+que el tamaño establecido de la caja se 
+mantenga, dejando fuera al margin. +
+_Margin:_ + 
+Es una distancia desde el borde de un 
+elemento hasta otro. +
+_Outline:_ +
+Sempodria decir que es un resaltado del 
+elemento, ya que es una línea que se 
+dibuja alrededor de estos, fuera de los 
+bordes. +
+*Propiedad display*  +
+Block +
+Es un elemento con compotamiento de 
+bloque como su nombre lo dice + 
+Inline +
+ Hacen que la caja de un elemento sea de 
+bloque o en línea respectivamente +
+Inline-block +
+Es un elemento con comportamiento en 
+linea y en bloque +
+None +
+Esto quiere decir quetodos sus 
+descendientes también desaparecen por 
+completo de la página. +
+Box-sizing + 
+Debe calcular el ancho y alto total de un 
+elemento. + 
+Content-box + 
+Es el comportamiento CSS por defecto para 
+el tamaño de la caja (box-sizing). Si se 
+define el ancho de un elemento en 100 
+pixeles, la caja del contenido del 
+elemento tendrá 100 pixeles de ancho, y 
+el ancho de cualquier borde o relleno ser 
+añadirá al ancho final desplegado. +
+Border-box +
+Le dice al navegador tomar en cuenta para 
+cualquier valor que se especifique de 
+borde o de relleno para el ancho o alto 
+de un elemento. Es decir, si se define un 
+elemento con un ancho de 100 pixeles. 
+Esos 100 pixeles incluíran cualquier 
+borde o relleno que se añadan, y la caja 
+de contenido se encogerá para absorber 
+ese ancho extra. Esto hace mucho más 
+fácil dimensionar elementos. +
+
+*_Es por ello que debemos cambiar esta 
+propiedad del box sizing de content box 
+pasarla a border box*_ + 
+*Flujo de Documento* +
+Todos los documentos llevan un flujo, ya 
+que es así como los lee el navegador este 
+flujo es de izquierda a derecha y de 
+arriba a abajo, es el flujo po default 
+del navegador, pero tambíen nosotros 
+podemos modificar ese flujo, para hacerlo 
+personalizado. +
+Existen varios tipos de posicionamientos, 
+y algunos de estos van dentro del flujo y 
+otros no. 
+
+*Tipos de posicionamiento:* +
+- _static +_
+Es un posicionamiento que viene por 
+default y este sigue el flujo del 
+documento, esta en relación con al 
+navegador y su espacio en el flujo se 
+conserva, si un div no se le especifica 
+un posicionamiento, es este el que toma 
+por default  + 
+- _relative_ +
+Este tipo de posicionamiento va en 
+realción a su contenedor padre y su 
+espacio en el fujo del documento se 
+reserva + 
+- _absolute_ + 
+Este tipo de posicionamiento va en 
+relación a su contenedor padre y su 
+espacio en el flujo del documento no se 
+conserva, en otras palabras es 
+responsabilidad de nosotros este tipo de 
+posicionamiento
+- fixed + 
+Es un tipo de posicionamiento que su 
+espacio no se reserva en el flujo del 
+documento y se coloca en relación al 
+navegador +
+- sticky +
+Esta es una combinación entre la relativa 
+y el fixed, porque comienza en el flujo 
+del documento pero al hacer scroll este 
+se sale del flujo y se coloca en una 
+posición fija
+*Unidades de medida en CSS* + 
+- _Absolutas_ + 
+Son unidades que se establecen como 
+centimetros, picas, milimetros, entre 
+otras, este tipo de unidades de medida no 
+son muy utilizadas ya que no se adaptan 
+facilmente 
+- _Relativas_ +
+Este tipo de unidad es la mas usada, 
+gracias a su fácil adaptación, en otras 
+palabras su valor depende de otro valor. 
++   
+**Descripción de todas las unidades 
+relativas** 
+- px +
+Esta unidad depende de la resolución del 
+dispositivo que se este utilizando
+- em +
+Esta es relativa respecto a la altura de 
+la letra x +
+- rem +
+La unidad de medida rem es muy similar a 
+em, con la única diferencia de que no es 
+escalable, esto quiere decir que no 
+depende del elemento padre, sino del 
+elemento raíz del documento +
+*Selectores* +
+_Básicos_ +
+- _tag _+
+
+-_Id_ + 
+Este tipo de selector nos sirve para que 
+aquellos que tengan un id en especifico 
+se leasignen ciertos estilo y a los demas 
+no +
+- _Clase_ + 
+Este tipo de selectores nos sirve para 
+reutilizar código , ya que aplica los 
+estilos a todos aquellos elementos que 
+esten en una clase especifica + 
+_Relación_ +
+- Espacio +
+Seleccionatodo lo que este dentro de + 
+- > + 
+Este es para los hijos directos de algun 
+elemento + 
+- + +
+Este es el hermano adyacente, es decir 
+que tiene estar al lado de + 
+- ~ +
+Este es el hermano general, no 
+necesariamente tiene que estar al lado + 
+*PseudoSelectores* +
+- Pseudoclase +
+Son aquellas que el navegador ya tiene 
+por defaul, estas ya estan establecidas, 
+son clases +
+- PseudoElemento +
+Son utilizados para diseñar partes 
+especificas de un elemento
+- 4 ejemplos de Pseudoclase +
+[fuente, css]
+----
+a.highlight:hover {
+  color: #ff0000;
+}
+----
+[fuente, css]
+----
+div:hover {
+  background-color: blue;
+}
+----
+[fuente, css]
+----
+p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+----
+[fuente, css]
+----
+p:first-child {
+  color: blue;
+}
+----
+- 4 ejemplos de Pseudoelemento +
+[fuente, css]
+----
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+----
+[fuente, css]
+----
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+----
+[fuente, css]
+----
+p.intro::first-letter {
+  color: #ff0000;
+  font-size:200%;
+}
+----
+[fuente, css]
+----
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+----
+
+
+
+*- Descripción de la cascada y sus 
+niveles* +
+La cascada se encarga de eliminar la 
+ambigüedad aplicando ciertos niveles para 
+dar prioridad, de acuerdo a estros 3 
+nivesles +  
+- Importancia + 
+Aquí verifica cual es que importa más, 
+depende de las hojas donde se esta colocdo
+- Especificidad + 
+Si lo anteior no funciona entones entra 
+la especificidad, donde se determina el 
+peso de cada elemento y el más pesado gana
+- Orden +
+Aquí entra en juego el orden de 
+declaración, el ultimo declarado es el 
+que gana +
+*El concepto de especificididad y cómo se 
+calcula.* +
+
+El navegador asigna un peso para decidir 
+cual selector va a aplicar en caso de que 
+haya una colisión +_
+Se calcula sumando lo valores de acuerdo 
+a los elementos que se tienen.+
+_Valores_ +
+Etiqueta html--------------->10000 +
+I--------------------------->100 +
+Clase o pseudoclase---------->10 +
+Elemento o pseudoelemento---->1 + 
