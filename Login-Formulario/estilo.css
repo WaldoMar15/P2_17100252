@@ -1,0 +1,20 @@
+*{ 
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.corte{
+    
+    width: 300px;
+    height: 200px;
+    margin-left: 550px;
+    margin-right: 550px;
+    margin-top: 100px;
+    color: white;
+}
+nav
+{
+background:#f0ecec;
+background-image: linear-gradient(to bottom, #fdfbfb, #f062e9);
+background-repeat: repeat-x;
+}
